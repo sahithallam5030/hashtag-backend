@@ -128,5 +128,5 @@ model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
 model.summary()
 model.compile(optimizer="rmsprop", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
 # Train the model with input and target data from encoder and decoder
-model.fit([encode_input_data, decoded_input_data], decoded_target_data,batch_size=450, epochs=9)
+model.fit([encode_input_data, decoded_input_data], decoded_target_data,batch_size=500, epochs=9)
 model.save("model.h5")
